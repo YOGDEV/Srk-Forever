@@ -23,8 +23,9 @@ h3{
     width: 100%;    /* Makes image fill the container's width */
     height: auto;   /* Maintains aspect ratio */
 }
-body{
+body {
     background-color: black;
+    overflow-x: hidden; /* This prevents horizontal scrolling */
 }
 .flex{
     display: flex;
@@ -42,7 +43,7 @@ body{
     width: 31.5%; 
     height: 70%;
     /* background-color: black; */
-    background-image: url('images/kajol.png');
+    background-image: url('Images/kajol.png');
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
