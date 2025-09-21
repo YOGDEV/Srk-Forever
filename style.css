@@ -1,0 +1,161 @@
+.train {
+    width: 100%;
+    max-width: 70%;
+    position: relative; /* Crucial for positioning children */
+    z-index: 0;
+    animation: moveTrain 10s linear infinite;
+
+}
+h2 {
+    font-family: 'Dancing Script', cursive;
+    font-size: 3.5rem;
+    color: rgb(219, 199, 71);
+    align-items: center;
+}
+h3{
+    font-family: 'Dancing Script', cursive;
+    font-size: 2.5rem;
+    color: rgb(219, 199, 71);
+}
+
+.train-image {
+    display: block; /* Removes extra space below the image */
+    width: 100%;    /* Makes image fill the container's width */
+    height: auto;   /* Maintains aspect ratio */
+}
+body{
+    background-color: black;
+}
+.flex{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    /* height: 100vh; */
+
+    background: linear-gradient(45deg, #0f2027, #203a43, #2c5364);
+}
+
+
+
+.kajol{
+    width: 31.5%; 
+    height: 70%;
+    /* background-color: black; */
+    background-image: url('images/kajol.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    position: absolute;
+    bottom: 0;
+    left: 0;        
+    z-index: 1;
+    animation: moveKajol 20s linear infinite;
+     /* Added a drop-shadow for a more realistic effect */
+    filter: drop-shadow(5px 5px 5px rgba(0, 0, 0, 0.6));
+}
+
+@keyframes moveKajol {
+    from {
+        left: 0;
+    }
+
+    to {
+        left: calc(100% - 63.5%);
+ 
+    }
+}
+
+@keyframes moveTrain {
+    0% {
+        left: -100%;
+    }
+    100% {
+        left: 100%;
+    }
+}
+
+/*audio */
+/* Add this to your style.css */
+.content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    z-index: 1;
+    padding: 20px;
+    color: white;
+}
+
+.audio-players {
+    margin-top: 40px;
+    padding: 20px 30px;
+    background-color: rgba(2, 19, 49, 0.793); /* Dark semi-transparent card */
+    border-radius: 15px;
+    width: 90%;
+    max-width: 600px;
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+    border: 1px solid rgba(219, 199, 71, 0.2); /* Subtle golden border */
+}
+
+audio {
+    width: 100%;
+    margin-top: 15px;
+    border-radius: 0;
+    border: none; /* Removed the old border */
+}
+
+/* Remove the default panel background to make it transparent */
+audio::-webkit-media-controls-panel {
+    background: none;
+}
+
+/* Tint the icons with a golden color */
+audio::-webkit-media-controls-play-button,
+audio::-webkit-media-controls-mute-button {
+    filter: invert(80%) sepia(50%) saturate(500%) hue-rotate(3deg);
+}
+
+/* Style the timeline track */
+audio::-webkit-media-controls-timeline {
+    background-color: rgba(219, 199, 71, 0.2);
+    border-radius: 25px;
+    margin: 0 15px;
+}
+
+/* Add this to your style.css */
+
+.audio-player-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px; /* Adds space between the elements */
+    margin-top: 15px;
+}
+
+.replay-button {
+    background-color: transparent;
+    border: 2px solid rgb(219, 199, 71);
+    color: rgb(219, 199, 71);
+    padding: 8px 16px;
+    border-radius: 50px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: all 0.3s ease;
+}
+
+.replay-button:hover {
+    background-color: rgb(219, 199, 71);
+    color: #111;
+    box-shadow: 0 0 15px rgba(219, 199, 71, 0.7);
+}
+
+.audio-player-wrapper{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 15px; /* Adds space between the elements */
+    margin-top: 15px;
+}

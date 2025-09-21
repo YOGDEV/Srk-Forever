@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Srk forever</title>
+</head>
+<body>
+    <!-- This div has the flex properties -->
+    <div class="flex">
+        <h2>Last of Stars</h2>
+        <!-- The train div is directly inside the flex container -->
+        <div class="train">
+             <img src="images/train.jpg" alt="Train" class="train-image">
+            
+            <div class="kajol"></div>
+        </div>
+    </div>
+    <main class="content">
+        <h3>Bade bade deshon mein aisi choti choti baatein hoti rehti hain, Senorita.</h3>
+
+        <!-- Add the Audio Players Here -->
+        <div class="audio-players">
+    <h3>Soundtrack</h3>
+    <div class="audio-player-wrapper">
+        <audio class="audio-player" controls src="Song/Ruk Ja O Dil Deewane Dilwale Dulhania Le Jayenge 128 Kbps.mp3">
+            Your browser does not support the audio element.
+        </audio>
+        <button class="replay-button">Replay</button>
+    </div>
+</div>
+    </main>
+    <script>
+    // Find all the replay buttons on the page
+    const replayButtons = document.querySelectorAll('.replay-button');
+
+    // Loop through each button and add a click event
+    replayButtons.forEach(button => {
+        button.addEventListener('click', () => {
+            // Find the audio player that is right before this button
+            const audioPlayer = button.previousElementSibling;
+
+            // Reset the song to the beginning
+            audioPlayer.currentTime = 0;
+
+            // Play the song
+            audioPlayer.play();
+        });
+    });
+</script>
+</body>
+</html>
