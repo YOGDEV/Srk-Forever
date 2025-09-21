@@ -4,7 +4,7 @@
     position: relative; /* Crucial for positioning children */
     z-index: 0;
     animation: moveTrain 10s linear infinite;
-
+    
 }
 h2 {
     font-family: 'Dancing Script', cursive;
@@ -25,7 +25,6 @@ h3{
 }
 body {
     background-color: black;
-    overflow-x: hidden; /* This prevents horizontal scrolling */
 }
 .flex{
     display: flex;
@@ -33,7 +32,7 @@ body {
     align-items: center;
     flex-direction: column;
     /* height: 100vh; */
-
+    overflow-x: hidden; 
     background: linear-gradient(45deg, #0f2027, #203a43, #2c5364);
 }
 
