@@ -18,11 +18,17 @@
         </div>
     </div>
     <main class="content">
+         
         <h3>Bade bade deshon mein aisi choti choti baatein hoti rehti hain, Senorita.</h3>
-
+       
         <!-- Add the Audio Players Here -->
-        <div class="audio-players">
-    <h3>Soundtrack</h3>
+<div class="audio-players">
+    <div class="soundtrack">
+    <h3 >Soundtrack</h3>
+     <div class="music-icon hidden">
+        <img src="Images/music_icon.png" alt="Music Icon" class="music-image">
+    </div>
+    </div>
     <div class="audio-player-wrapper">
         <audio class="audio-player" controls src="Song/Ruk Ja O Dil Deewane Dilwale Dulhania Le Jayenge 128 Kbps.mp3">
             Your browser does not support the audio element.
@@ -31,23 +37,8 @@
     </div>
 </div>
     </main>
-    <script>
-    // Find all the replay buttons on the page
-    const replayButtons = document.querySelectorAll('.replay-button');
+   
 
-    // Loop through each button and add a click event
-    replayButtons.forEach(button => {
-        button.addEventListener('click', () => {
-            // Find the audio player that is right before this button
-            const audioPlayer = button.previousElementSibling;
-
-            // Reset the song to the beginning
-            audioPlayer.currentTime = 0;
-
-            // Play the song
-            audioPlayer.play();
-        });
-    });
-</script>
+<script src="index.js"></script>
 </body>
 </html>
